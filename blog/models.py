@@ -23,3 +23,23 @@ class Post(models.Model):
 
     def __str__(self):
         return self.title
+    
+
+
+##################____________ Using Mongoengine ODM  ______________################
+
+
+
+# from django.utils import timezone
+# from mongoengine import Document, fields
+
+
+# class Post(Document):
+#     title = fields.StringField(max_length=255,verbose_name=_('Title'))
+#     content = fields.StringField(max_length=1000, verbose_name=_('Content'))
+#     author = fields.ReferenceField(User,verbose_name=_('Author'))
+#     created_at = fields.DateTimeField(default=timezone.now,verbose_name=_('Created at'))
+#     updated_at = fields.DateTimeField(default=timezone.now,verbose_name=_('Updated_at'))  
+
+#     def __str__(self):
+#         return self.title   
