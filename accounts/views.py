@@ -33,7 +33,7 @@ class LoginView(generics.CreateAPIView):
 
         if user:
             token, created = Token.objects.get_or_create(user=user)
-            return Response({'token': str(token), 'user_id': user.id, 'email': user.username})
+            return Response({'token': str(token), 'user_id': user.id, 'email': user.email})
         else:
             return Response({'error': 'Invalid credentials'}, status=400)    
         

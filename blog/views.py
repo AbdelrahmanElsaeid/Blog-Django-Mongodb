@@ -40,7 +40,7 @@ class PublishPostView(generics.GenericAPIView):
         serializer = self.serializer_class(post)
 
 
-        return Response({'status':' post created', 'data': serializer.data})
+        return Response({'status':'post created', 'data': serializer.data})
     
     def put(self,request,post_id,*args,**kwargs):
         payload=request.data 
